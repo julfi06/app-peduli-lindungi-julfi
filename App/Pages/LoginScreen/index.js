@@ -4,24 +4,21 @@ import {
     Text, 
     SafeAreaView, 
     StyleSheet,
+    TextInput, 
     StatusBar, 
     Image,
+    TouchableOpacity
 } from 'react-native';
+import LoginScreen from '../../../../../AndroidProgramming/app-taskita-master/App/Pages/LoginScreen';
 import {
-    LogoPeduli,
+    LogoTop,
     LogoKpcpen,
     LogoKominfo,
     LogoKemenkes,
     LogoBumn
 } from '../../assets';
 
-export default SplashScreen = ({navigation}) => {
-  React.useEffect(() => {
-    setTimeout(() => {
-      navigation.replace('LoginScreen')
-     }, 3000)
-    }, [navigation]);
-
+export default LoginScreen = ({navigation}) => {
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar
@@ -30,8 +27,11 @@ export default SplashScreen = ({navigation}) => {
                     backgroundColor="#ffffff" />
 
         <View style={styles.contentimg}>
-          <Image source={LogoPeduli} style={styles.imgIcon}/>
+          <Image source={LogoTop} style={styles.imgIcon}/>
         </View>
+
+        <TextInput style={[styles.inputStyle, {marginTop:80}]} placeholder="Email"/>
+        <PrimaryButton customeStyle={styles.btnLoginStyle} title="LOGIN"/>
 
         <Text style={styles.text1}>Bekerja sama dengan:</Text>
 
@@ -44,8 +44,8 @@ export default SplashScreen = ({navigation}) => {
       </SafeAreaView>
     );
   };
-  
-  const styles = StyleSheet.create({
+
+const styles = StyleSheet.create({
     container: {
       flex:1,
       backgroundColor: '#ffffff',
@@ -59,6 +59,21 @@ export default SplashScreen = ({navigation}) => {
     imgIcon:{
       height:70,
       width:300
+    },
+    inputStyle:{
+        height: 50,
+        marginTop: 12,
+        borderWidth: 1,
+        paddingLeft:30,
+        borderRadius:50,
+        borderColor:'#695D91',
+        fontSize:16,
+        paddingTop:10,
+        paddingBottom:10,
+        backgroundColor:'#695D91'
+    },
+    btnLoginStyle:{
+        marginTop:40,
     },
     content: {
       marginTop:10,
@@ -101,4 +116,4 @@ export default SplashScreen = ({navigation}) => {
       alignItems:'center',
       alignContent:'center'
     },
-  });
+});
