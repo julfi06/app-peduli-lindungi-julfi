@@ -27,7 +27,7 @@ const style = StyleSheet.create({
         marginTop:10,
         padding:15,
         alignItems:'center',
-        backgroundColor:'#A03E82'
+        backgroundColor:'#008bde'
     },
     btnSuccess:{
         borderRadius:40,

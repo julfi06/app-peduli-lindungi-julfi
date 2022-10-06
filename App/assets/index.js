@@ -20,6 +20,8 @@ import LogoKominfo from './img/logo_kominfo.png';
 import LogoKpcpen from './img/logo_kpcpen.png';
 import LogoTop from './img/logo-top.png';
 import LogoPeduli from './img/logo-with-text.png';
+import IconBell from './img/icon-bell.png';
+import IconProfile from './img/icon-profile';
 
 export {
     BgDokter,
@@ -43,5 +45,7 @@ export {
     LogoKominfo,
     LogoKpcpen,
     LogoTop,
-    LogoPeduli
+    LogoPeduli,
+    IconBell,
+    IconProfile
 };

@@ -9,7 +9,6 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native';
-import LoginScreen from '../../../../../AndroidProgramming/app-taskita-master/App/Pages/LoginScreen';
 import {
     LogoTop,
     LogoKpcpen,
@@ -17,6 +16,10 @@ import {
     LogoKemenkes,
     LogoBumn
 } from '../../assets';
+import {
+    PrimaryButton,
+    SuccessButton
+} from '../../Componets';
 
 export default LoginScreen = ({navigation}) => {
     return (
@@ -30,8 +33,9 @@ export default LoginScreen = ({navigation}) => {
           <Image source={LogoTop} style={styles.imgIcon}/>
         </View>
 
-        <TextInput style={[styles.inputStyle, {marginTop:80}]} placeholder="Email"/>
-        <PrimaryButton customeStyle={styles.btnLoginStyle} title="LOGIN"/>
+        <TextInput style={[styles.inputStyle, {marginTop:30}]} placeholder="youremail@domain.com"/>
+        <TextInput style={[styles.inputStyle, {marginTop:20}]} placeholder="password"/>
+        <PrimaryButton customeStyle={styles.btnLoginStyle} onPress={()=>navigation.navigate('HomeScreen')} title="Login"/>
 
         <Text style={styles.text1}>Bekerja sama dengan:</Text>
 
@@ -52,28 +56,32 @@ const styles = StyleSheet.create({
     },
     contentimg: {
       backgroundColor:'#ffffff',
-      marginTop:200,
+      marginTop:60,
       alignItems: 'center',
       justifyContent: 'center',
     },
     imgIcon:{
-      height:70,
-      width:300
+      height:150,
+      width:155
     },
     inputStyle:{
         height: 50,
-        marginTop: 12,
+        marginLeft:20,
+        marginRight:20,
         borderWidth: 1,
         paddingLeft:30,
-        borderRadius:50,
-        borderColor:'#695D91',
+        borderRadius:10,
+        borderColor:'#008bde',
         fontSize:16,
         paddingTop:10,
         paddingBottom:10,
-        backgroundColor:'#695D91'
+        backgroundColor:'#ffffff'
     },
     btnLoginStyle:{
         marginTop:40,
+        marginLeft:20,
+        marginRight:20,
+        borderRadius:10
     },
     content: {
       marginTop:10,
@@ -82,7 +90,7 @@ const styles = StyleSheet.create({
       flexDirection:'row'
     },
     text1: {
-      marginTop:250,
+      marginTop:85,
       marginLeft:30,
       fontSize:10,
       textAlign:'left',
