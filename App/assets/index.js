@@ -23,7 +23,7 @@ import LogoPeduli from './img/logo-with-text.png';
 import IconBell from './img/icon-bell.png';
 import IconProfile from './img/icon-profile.png';
 import IconDropdown from './img/icon-dropdown.png';
-import IconScan from '.img/icon-scan.png';
+import IconScan from './img/icon-scan.png';
 
 export {
     BgDokter,

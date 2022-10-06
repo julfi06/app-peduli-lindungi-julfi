@@ -12,6 +12,8 @@ import {
     IconProfile,
     IconBell,
     IconHandQr,
+    IconDropdown,
+    IconScan,
     IconVaccine,
     IconCovidTest,
     IconEhac,
@@ -21,6 +23,9 @@ import {
     IconCovid,
     IconFindHospital
 } from '../../assets';
+import {
+    PrimaryButton
+} from '../../Componets';
 
 export default HomeScreen = ({navigation}) => {
     return (
@@ -48,10 +53,23 @@ export default HomeScreen = ({navigation}) => {
                 <Image source={IconHandQr} style={styles.imgIcon3}/>
             </View>
             <View style={styles.contentcheckin}>
-            <Text style={styles.text5}>Check-in Preference</Text>
+                
+                    <Image source={IconDropdown} style={styles.imgIcon4}/>
+                    <Text style={styles.text5}>Check-in Preference</Text>
+              <View style={styles.contentscan}>
+                <Image source={IconScan} style={styles.imgIcon5}/>
+                <Text style={styles.text6}>Check-in</Text>
+              </View>
             </View>
         </View>
         
+        <View style={styles.garis}/>
+
+        <View style={styles.home}>
+          <View style={styles.icon1}>
+          </View>
+        </View>
+
       </SafeAreaView>
     );
   };
@@ -135,10 +153,45 @@ const styles = StyleSheet.create({
         backgroundColor:'#ffffff',
         flexDirection:'row',
     },
+    contentscan:{
+        marginLeft:40,
+        marginRight:10,
+        marginTop:12,
+        alignItems:'center',
+        backgroundColor:'#def3ff',
+        borderRadius:20,
+        paddingRight:13,
+        paddingLeft:13,
+        flexDirection:'row',
+    },
     text5: {
         marginTop:20,
         fontSize:14,
-        marginLeft:20,
         color: 'black'
+    },
+    imgIcon4:{
+        marginTop:10,
+        height:40,
+        width:40,
+    },
+    imgIcon5:{
+        height:20,
+        width:20,
+    },
+    text6: {
+      marginLeft:5,
+      fontSize:12,
+      color: '#008bde'
+    },
+
+    garis:{
+      marginTop:20,
+      height:15,
+      backgroundColor:'#cdd2d5'
+    },
+
+    home:{
+      backgroundColor:'#ffffff',
+      flexDirection:'row'
     }
 });
