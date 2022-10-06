@@ -23,9 +23,6 @@ import {
     IconCovid,
     IconFindHospital
 } from '../../assets';
-import {
-    PrimaryButton
-} from '../../Componets';
 
 export default HomeScreen = ({navigation}) => {
     return (

@@ -4,7 +4,7 @@ import {
   SplashScreen,
   LoginScreen,
   HomeScreen,
-  ImmunScreen,
+  ImunScreen,
   EhacScreen
 } from './Pages';
 
@@ -16,8 +16,8 @@ export default Router = () => {
       <Stack.Screen name="SplashScreen" component={SplashScreen} options={{headerShown: false}} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown: false}} />
       <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown: false}} />
-      <Stack.Screen name="ImmunScreen" component={ImmunScreen} options={{headerShown: false}} />
-      <Stack.Screen name="EhacScreen" component={EhacScreen} options={{headerShown: false}} />
+      <Stack.Screen name="ImunScreen" component={ImunScreen} options={{headerShown: false}}/>
+      <Stack.Screen name="EhacScreen" component={EhacScreen} options={{headerShown: false}}/>
     </Stack.Navigator>
   );
 };
