@@ -19,7 +19,7 @@ import LogoKemenkes from './img/logo_kemenkes.png';
 import LogoKominfo from './img/logo_kominfo.png';
 import LogoKpcpen from './img/logo_kpcpen.png';
 import LogoTop from './img/logo-top.png';
-import LogoPeduli from './img/peduli1.png';
+import LogoPeduli from './img/logo-with-text.png';
 
 export {
     BgDokter,
