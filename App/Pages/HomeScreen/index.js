@@ -21,7 +21,8 @@ import {
     IconTelemedicine,
     IconHealthcare,
     IconCovid,
-    IconFindHospital
+    IconFindHospital,
+    IconStatisCovid
 } from '../../assets';
 
 export default HomeScreen = ({navigation}) => {
@@ -63,8 +64,48 @@ export default HomeScreen = ({navigation}) => {
         <View style={styles.garis}/>
 
         <View style={styles.home}>
-          <View style={styles.icon1}>
+          <View style={styles.row1}>
+            <View style={styles.icon1}>
+              <TouchableOpacity onPress={()=>navigation.navigate('ImmunScreen')}>
+                <Image source={IconVaccine} style={styles.vaccine}/>
+              </TouchableOpacity>
+              <Text style={styles.textvaccine}>Vaccine and Immunization</Text>
+            </View>
+            <View style={styles.icon2}>
+                <Image source={IconCovidTest} style={styles.covidtest}/>
+                <Text style={styles.textcovidtest}>Covid-19 Test Result</Text>
+            </View>
+            <View style={styles.icon3}>
+              <TouchableOpacity onPress={()=>navigation.navigate('EhacScreen')}>
+                <Image source={IconEhac} style={styles.ehac}/>
+              </TouchableOpacity>
+              <Text style={styles.textehac}>EHAC</Text>
+            </View>
           </View>
+          <View style={styles.row2}>
+              <View style={styles.icon4}>
+                <Image source={IconTravelRegulation} style={styles.travel}/>
+                <Text style={styles.texttravel}>Travel Regulations</Text>
+              </View>
+              <View style={styles.icon5}>
+                <Image source={IconTelemedicine} style={styles.telemedicine}/>
+                <Text style={styles.texttelemedicine}>Telemedicine</Text>
+              </View>
+              <View style={styles.icon6}>
+                <Image source={IconHealthcare} style={styles.healthcare}/>
+                <Text style={styles.texthealth}>Healthcare Facility</Text>
+              </View>
+            </View>
+            <View style={styles.row3}>
+              <View style={styles.icon7}>
+                <Image source={IconStatisCovid} style={styles.covid}/>
+                <Text style={styles.textcovid}>Covid-19 Statistic</Text>
+              </View>
+              <View style={styles.icon8}>
+                <Image source={IconFindHospital} style={styles.findhospital}/>
+                <Text style={styles.textfindhospital}>Find Hospital Bed</Text>
+              </View>
+            </View>
         </View>
 
       </SafeAreaView>
@@ -182,13 +223,189 @@ const styles = StyleSheet.create({
     },
 
     garis:{
-      marginTop:20,
-      height:15,
+      marginTop:15,
+      height:10,
       backgroundColor:'#cdd2d5'
     },
 
     home:{
+      backgroundColor:'#ffffff'
+    },
+    row1:{
+      flexDirection:'row',
       backgroundColor:'#ffffff',
-      flexDirection:'row'
-    }
+      alignContent:'center',
+      alignItems:'center'
+    },
+
+    icon1:{
+      alignItems:'center',
+      alignContent:'center',
+      marginTop:15,
+      marginLeft:10,
+      height:120,
+      width:120
+    },
+    vaccine:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    textvaccine:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
+
+    icon2:{
+      alignItems:'center',
+      alignContent:'center',
+      marginTop:15,
+      height:120,
+      width:110
+    },
+    covidtest:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    textcovidtest:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
+
+    icon3:{
+      alignItems:'center',
+      alignContent:'center',
+      marginTop:15,
+      marginRight:15,
+      height:120,
+      width:110
+    },
+    ehac:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    textehac:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
+
+    row2:{
+      flexDirection:'row',
+      backgroundColor:'#ffffff',
+      alignContent:'center',
+      alignItems:'center'
+    },
+    icon4:{
+      alignItems:'center',
+      alignContent:'center',
+      marginLeft:20,
+      height:120,
+      width:100,
+      marginTop:10
+    },
+    travel:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    texttravel:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
+
+    icon5:{
+      alignItems:'center',
+      alignContent:'center',
+      height:120,
+      width:110,
+      marginLeft:10,
+      marginTop:10
+    },
+    telemedicine:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    texttelemedicine:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
+
+    icon6:{
+      alignItems:'center',
+      alignContent:'center',
+      height:120,
+      width:100,
+      marginLeft:5,
+      marginTop:10
+    },
+    healthcare:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    texthealth:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
+
+    row3:{
+      flexDirection:'row',
+      backgroundColor:'#ffffff',
+      alignContent:'center',
+      alignItems:'center'
+    },
+    icon7:{
+      alignItems:'center',
+      alignContent:'center',
+      marginLeft:20,
+      height:120,
+      width:100,
+      marginTop:10
+    },
+    covid:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    textcovid:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
+
+    icon8:{
+      alignItems:'center',
+      alignContent:'center',
+      height:120,
+      width:110,
+      marginLeft:10,
+      marginTop:10
+    },
+    findhospital:{
+      height:70,
+      width:70,
+      borderRadius:10
+    },
+    textfindhospital:{
+      marginTop:5,
+      fontSize:13,
+      color:'black',
+      textAlign:'center'
+    },
 });

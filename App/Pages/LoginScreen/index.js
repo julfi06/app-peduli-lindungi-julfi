@@ -14,11 +14,12 @@ import {
     LogoKpcpen,
     LogoKominfo,
     LogoKemenkes,
-    LogoBumn
+    LogoBumn,
+    IconMail,
+    IconLock
 } from '../../assets';
 import {
-    PrimaryButton,
-    SuccessButton
+    PrimaryButton
 } from '../../Componets';
 
 export default LoginScreen = ({navigation}) => {
@@ -33,8 +34,14 @@ export default LoginScreen = ({navigation}) => {
           <Image source={LogoTop} style={styles.imgIcon}/>
         </View>
 
-        <TextInput style={[styles.inputStyle, {marginTop:30}]} placeholder="youremail@domain.com"/>
-        <TextInput style={[styles.inputStyle, {marginTop:20}]} placeholder="password"/>
+        <View style={styles.email}>
+          <Image source={IconMail} style={styles.mail}/>
+          <TextInput style={styles.inputmail} placeholder="youremail@domain.com"/>
+        </View>
+        <View style={styles.password}>
+          <Image source={IconLock} style={styles.lock}/>
+          <TextInput style={styles.inputlock} placeholder="password"/>
+        </View>
         <PrimaryButton customeStyle={styles.btnLoginStyle} onPress={()=>navigation.navigate('HomeScreen')} title="Login"/>
 
         <Text style={styles.text1}>Bekerja sama dengan:</Text>
@@ -64,23 +71,10 @@ const styles = StyleSheet.create({
       height:150,
       width:155
     },
-    inputStyle:{
-        height: 50,
-        marginLeft:20,
-        marginRight:20,
-        borderWidth: 1,
-        paddingLeft:30,
-        borderRadius:10,
-        borderColor:'#008bde',
-        fontSize:16,
-        paddingTop:10,
-        paddingBottom:10,
-        backgroundColor:'#ffffff'
-    },
     btnLoginStyle:{
         marginTop:40,
-        marginLeft:20,
-        marginRight:20,
+        marginLeft:30,
+        marginRight:30,
         borderRadius:10
     },
     content: {
@@ -124,4 +118,50 @@ const styles = StyleSheet.create({
       alignItems:'center',
       alignContent:'center'
     },
+    email:{
+      flexDirection:'row',
+      height: 50,
+      marginTop:20,
+      marginLeft:30,
+      marginRight:30,
+      borderWidth: 1,
+      borderRadius:10,
+      borderColor:'#008bde',
+      backgroundColor:'#ffffff'
+    },
+    mail:{
+      height:20,
+      width:20,
+      alignItems:'center',
+      alignContent:'center',
+      marginTop:15,
+      marginLeft:20
+    },
+    inputmail:{
+      fontSize:18,
+      marginLeft:15
+    },
+    password:{
+      flexDirection:'row',
+      height: 50,
+      marginTop:20,
+      marginLeft:30,
+      marginRight:30,
+      borderWidth: 1,
+      borderRadius:10,
+      borderColor:'#008bde',
+      backgroundColor:'#ffffff'
+    },
+    lock:{
+      height:20,
+      width:20,
+      alignItems:'center',
+      alignContent:'center',
+      marginTop:15,
+      marginLeft:20
+    },
+    inputlock:{
+      fontSize:18,
+      marginLeft:15
+    }
 });

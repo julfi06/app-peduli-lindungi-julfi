@@ -16,7 +16,21 @@ import {
     LogoKemenkes,
     LogoBumn
 } from '../../assets';
-import {
-    PrimaryButton,
-    SuccessButton
-} from '../../Componets';
+
+export default ImmunScreen = ({navigation}) => {
+    return (
+      <SafeAreaView style={styles.container}>
+        <StatusBar
+                    barStyle="light-content"
+                    animated={true}
+                    backgroundColor="#ffffff" />
+      </SafeAreaView>
+    );
+  };
+
+  const styles = StyleSheet.create({
+    container: {
+      flex:1,
+      backgroundColor: '#ffffff',
+    },
+})

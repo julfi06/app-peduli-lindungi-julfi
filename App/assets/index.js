@@ -24,6 +24,8 @@ import IconBell from './img/icon-bell.png';
 import IconProfile from './img/icon-profile.png';
 import IconDropdown from './img/icon-dropdown.png';
 import IconScan from './img/icon-scan.png';
+import IconMail from './img/icon-mail.png';
+import IconLock from './img/icon-lock.png';
 
 export {
     BgDokter,
@@ -51,5 +53,7 @@ export {
     IconBell,
     IconProfile,
     IconDropdown,
-    IconScan
+    IconScan,
+    IconMail,
+    IconLock
 };
