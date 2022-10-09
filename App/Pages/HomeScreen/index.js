@@ -72,8 +72,10 @@ export default HomeScreen = ({navigation}) => {
               <Text style={styles.textvaccine}>Vaccine and Immunization</Text>
             </View>
             <View style={styles.icon2}>
+              <TouchableOpacity onPress={()=>navigation.navigate('CovidTestScreen')}>
                 <Image source={IconCovidTest} style={styles.covidtest}/>
-                <Text style={styles.textcovidtest}>Covid-19 Test Result</Text>
+              </TouchableOpacity>
+              <Text style={styles.textcovidtest}>Covid-19 Test Result</Text>
             </View>
             <View style={styles.icon3}>
               <TouchableOpacity onPress={()=>navigation.navigate('EhacScreen')}>
@@ -160,7 +162,7 @@ const styles = StyleSheet.create({
         height:80,
         borderTopRightRadius:10,
         borderTopLeftRadius:10,
-        backgroundColor:'#008bde',
+        backgroundColor:'#239BD8',
         flexDirection:'row',
     },
     text3: {
@@ -182,7 +184,7 @@ const styles = StyleSheet.create({
     },
     content4:{
         marginRight:30,
-        backgroundColor:'#008bde',
+        backgroundColor:'#239BD8',
         borderRadius:10,
     },
     contentcheckin:{
