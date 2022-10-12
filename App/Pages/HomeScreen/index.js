@@ -6,7 +6,8 @@ import {
     StyleSheet,
     StatusBar, 
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    Alert
 } from 'react-native';
 import {
     IconProfile,
@@ -29,7 +30,7 @@ export default HomeScreen = ({navigation}) => {
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar
-                    barStyle="light-content"
+                    barStyle="dark-content"
                     animated={true}
                     backgroundColor="#ffffff" />
 
@@ -86,19 +87,43 @@ export default HomeScreen = ({navigation}) => {
           </View>
           <View style={styles.row2}>
               <View style={styles.icon4}>
-              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
+              <TouchableOpacity 
+                onPress={() => 
+                  Alert.alert("Info", "Module sedang dalam pengembangan", [
+                    {
+                      text: "ok",
+                      onPress: () => console.log("Ok"),
+                    },
+                  ])
+                }>
                 <Image source={IconTravelRegulation} style={styles.travel}/>
               </TouchableOpacity>
                 <Text style={styles.texttravel}>Travel Regulations</Text>
               </View>
               <View style={styles.icon5}>
-              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
+              <TouchableOpacity 
+                onPress={() => 
+                  Alert.alert("Info", "Module sedang dalam pengembangan", [
+                    {
+                      text: "ok",
+                      onPress: () => console.log("Ok"),
+                    },
+                  ])
+                }>
                 <Image source={IconTelemedicine} style={styles.telemedicine}/>
               </TouchableOpacity>
                 <Text style={styles.texttelemedicine}>Telemedicine</Text>
               </View>
               <View style={styles.icon6}>
-              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
+              <TouchableOpacity 
+                onPress={() => 
+                  Alert.alert("Info", "Module sedang dalam pengembangan", [
+                    {
+                      text: "ok",
+                      onPress: () => console.log("Ok"),
+                    },
+                  ])
+                }>
                 <Image source={IconHealthcare} style={styles.healthcare}/>
               </TouchableOpacity>
                 <Text style={styles.texthealth}>Healthcare Facility</Text>
@@ -106,13 +131,29 @@ export default HomeScreen = ({navigation}) => {
             </View>
             <View style={styles.row3}>
               <View style={styles.icon7}>
-              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
+              <TouchableOpacity 
+                onPress={() => 
+                  Alert.alert("Info", "Module sedang dalam pengembangan", [
+                    {
+                      text: "ok",
+                      onPress: () => console.log("Ok"),
+                    },
+                  ])
+                }>
                 <Image source={IconStatisCovid} style={styles.covid}/>
                 </TouchableOpacity>
                 <Text style={styles.textcovid}>Covid-19 Statistic</Text>
               </View>
               <View style={styles.icon8}>
-              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
+              <TouchableOpacity 
+                onPress={() => 
+                  Alert.alert("Info", "Module sedang dalam pengembangan", [
+                    {
+                      text: "ok",
+                      onPress: () => console.log("Ok"),
+                    },
+                  ])
+                }>
                 <Image source={IconFindHospital} style={styles.findhospital}/>
               </TouchableOpacity>
                 <Text style={styles.textfindhospital}>Find Hospital Bed</Text>
