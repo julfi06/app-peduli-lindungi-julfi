@@ -86,25 +86,35 @@ export default HomeScreen = ({navigation}) => {
           </View>
           <View style={styles.row2}>
               <View style={styles.icon4}>
+              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
                 <Image source={IconTravelRegulation} style={styles.travel}/>
+              </TouchableOpacity>
                 <Text style={styles.texttravel}>Travel Regulations</Text>
               </View>
               <View style={styles.icon5}>
+              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
                 <Image source={IconTelemedicine} style={styles.telemedicine}/>
+              </TouchableOpacity>
                 <Text style={styles.texttelemedicine}>Telemedicine</Text>
               </View>
               <View style={styles.icon6}>
+              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
                 <Image source={IconHealthcare} style={styles.healthcare}/>
+              </TouchableOpacity>
                 <Text style={styles.texthealth}>Healthcare Facility</Text>
               </View>
             </View>
             <View style={styles.row3}>
               <View style={styles.icon7}>
+              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
                 <Image source={IconStatisCovid} style={styles.covid}/>
+                </TouchableOpacity>
                 <Text style={styles.textcovid}>Covid-19 Statistic</Text>
               </View>
               <View style={styles.icon8}>
+              <TouchableOpacity onPress={()=>navigation.navigate('ModuleScreen')}>
                 <Image source={IconFindHospital} style={styles.findhospital}/>
+              </TouchableOpacity>
                 <Text style={styles.textfindhospital}>Find Hospital Bed</Text>
               </View>
             </View>
